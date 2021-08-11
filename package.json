@@ -1,24 +1,29 @@
 {
   "name": "vite-lit",
-  "version": "0.0.0",
-  "main": "dist/my-element.es.js",
+  "version": "0.1.0",
+  "main": "dist/index.es.js",
   "exports": {
-    ".": "./dist/my-element.es.js"
+    ".": "./dist/index.es.js"
   },
-  "types": "types/my-element.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "types"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
+    "prebuild": "rimraf dist types",
     "build": "tsc && vite build"
   },
-  "dependencies": {
-    "lit-element": "^2.4.0"
-  },
   "devDependencies": {
-    "vite": "^2.4.4",
-    "typescript": "^4.3.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4"
+  },
+  "dependencies": {
+    "lit": "^2.0.0-rc.2"
   }
 }
