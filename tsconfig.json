@@ -16,6 +16,6 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["packages/**/*.ts", "packages/**/*.test.ts", "packages/vite-env.d.ts"],
-  "exclude": []
+  "include": ["packages/**/*.ts"],
+  "exclude": ["packages/**/*.test.ts"]
 }
