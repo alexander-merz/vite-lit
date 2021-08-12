@@ -15,12 +15,13 @@
     "access": "public"
   },
   "scripts": {
-    "clean": "rimraf dist test types",
+    "clean:build": "rimraf dist types",
+    "clean:test": "rimraf test",
     "lint": "eslint packages --fix",
     "dev": "vite",
     "pretest": "tsc --p tsconfig.test.json",
     "test": "wtr",
-    "prebuild": "rimraf dist types",
+    "prebuild": "npm run clean:build",
     "build": "tsc && vite build",
     "prepare": "husky install"
   },
