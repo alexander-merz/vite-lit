@@ -35,8 +35,8 @@ suite('my-element', () => {
 
   test('handles a click', async () => {
     const el = (await fixture(html`<my-element></my-element>`)) as MyElement
-    const button = el.shadowRoot!.querySelector('button')!
-    button.click()
+    const button = el.shadowRoot?.querySelector('button')
+    button?.click()
     await el.updateComplete
     assert.shadowDom.equal(
       el,

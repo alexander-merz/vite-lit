@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit'
+import { LitElement, html, css, TemplateResult } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 /**
@@ -30,7 +30,7 @@ export class MyElement extends LitElement {
   @property({ type: Number })
   count = 0
 
-  render() {
+  render(): TemplateResult {
     return html`
       <h1>Hello, ${this.name}!</h1>
       <button @click=${this._onClick} part="button">Click Count: ${this.count}</button>
